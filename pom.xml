@@ -109,9 +109,13 @@
           <failsOnError>true</failsOnError>
           <consoleOutput>true</consoleOutput>
           <violationSeverity>warning</violationSeverity>
+          <activeRecipes>
+            <recipe>org.openrewrite.java.cleanup.Cleanup</recipe>
+          </activeRecipes>
         </configuration>
         <executions>
           <execution>
+            <?m2e execute onConfiguration?>
             <id>checkstyle</id>
             <phase>validate</phase>
             <goals>
